@@ -8,7 +8,6 @@ class CreateStudents < ActiveRecord::Migration[5.0]
       t.text :course
       t.string :gender
       t.string :email
-
       t.timestamps
     end
   end
