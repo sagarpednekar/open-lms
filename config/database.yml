@@ -1,0 +1,23 @@
+# Warning: The database defined as "test" will be erased and
+# re-generated from your development database when you run "rake".
+# Do not set this db to the same as development or production.
+#
+default: &default
+  adapter: postgresql
+  encoding: UTF8
+  host: localhost
+  pool: 5
+  username: postgres
+  password: shaggy
+
+development:
+  <<: *default
+  database: open_lms
+
+test:
+  <<: *default
+  database: open_lms_test
+
+production:
+  <<: *default
+  database: open_lms_production
