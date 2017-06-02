@@ -6,6 +6,7 @@ git_source(:github) do |repo_name|
 end
 
 # Required gems
+gem 'foundation-rails'
 gem 'rails', '~> 5.0.1'
 gem 'pg', '~> 0.18'
 gem 'puma', '~> 3.0'
