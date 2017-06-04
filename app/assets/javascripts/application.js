@@ -19,3 +19,5 @@
 $(function() {
     $(document).foundation();
 });
+
+$(function(){ $(document).foundation(); });
