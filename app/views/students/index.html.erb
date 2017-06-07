@@ -35,5 +35,9 @@
 </table>
 
 <br>
-
+<h3>Import Student details</h3>
+<%= form_tag import_students_path, multipart: true do %>
+  <%= file_field_tag :file %>
+  <%= submit_tag "Upload Students"%>
+<% end %>
 <%= link_to 'New Student', new_student_path %>

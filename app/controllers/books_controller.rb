@@ -61,6 +61,11 @@ class BooksController < ApplicationController
     end
   end
 
+  def import
+    Book.import(params[:file])
+    redirect_to books_path , notice: "Book details Added Succesfully"
+  end
+
   private
     # Use callbacks to share common setup or constraints between actions.
     def set_book

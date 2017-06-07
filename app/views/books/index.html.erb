@@ -41,5 +41,10 @@
 </table>
 
 <br>
+<h3>Import Book details</h3>
+<%= form_tag import_books_path, multipart: true do %>
+  <%= file_field_tag :file %>
+  <%= submit_tag "Upload Books"%>
+<% end %>
 
 <%= link_to 'New Book', new_book_path %>
