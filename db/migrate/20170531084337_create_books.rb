@@ -1,7 +1,7 @@
 class CreateBooks < ActiveRecord::Migration[5.0]
   def change
-    create_table :books, :id => false do |t|
-      t.primary_key :isbn,:string
+    create_table :books do |t|
+      t.string :isbn
       t.string :author
       t.string :title
       t.string :publication

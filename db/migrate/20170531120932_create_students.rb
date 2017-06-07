@@ -1,7 +1,7 @@
 class CreateStudents < ActiveRecord::Migration[5.0]
   def change
-    create_table :students,:id => false do |t|
-      t.primary_key :stud_id,:integer
+    create_table :students do |t|
+      t.integer :reg_no
       t.string :name
       t.text :address
       t.integer :mobile_no
