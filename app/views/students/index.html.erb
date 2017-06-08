@@ -1,8 +1,9 @@
-<p id="notice"><%= notice %></p>
+<div class="row">
+  <p id="notice"><%= notice %></p>
 
 <h1>Students</h1>
 
-<table>
+<table class="hover">
   <thead>
     <tr>
       <th>Stud</th>
@@ -40,4 +41,8 @@
   <%= file_field_tag :file %>
   <%= submit_tag "Upload Students"%>
 <% end %>
+
 <%= link_to 'New Student', new_student_path %>
+
+</div>
+</div>

@@ -15,3 +15,353 @@
  *= require foundation_and_overrides
  *= require foundation
  */
+
+
+/*===========================
+     CSS FOR NAVIGATION
+ ================================*/
+
+.nav-bar {
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-justify-content: space-between;
+    -ms-flex-pack: justify;
+    justify-content: space-between;
+    -webkit-align-items: center;
+    -ms-flex-align: center;
+    align-items: center;
+    background: #2c3840;
+    height: 75px;
+    margin-bottom: 75px;
+}
+
+.nav-bar .nav-bar-logo {
+    padding: 1.8rem;
+}
+
+.nav-bar li {
+    background: #2c3840;
+}
+
+.nav-bar a {
+    color: #fefefe;
+    transition: color 0.2s ease-in;
+}
+
+.nav-bar a:hover {
+    color: #a8b8c3;
+}
+
+@media screen and (max-width: 39.9375em) {
+    .nav-bar {
+        height: 53.57143px;
+    }
+}
+
+.nav-bar .offcanvas-trigger {
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-align-items: center;
+    -ms-flex-align: center;
+    align-items: center;
+    -webkit-justify-content: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+    padding: 1.6rem;
+    color: #fefefe;
+    text-transform: uppercase;
+    background-color: #566d7c;
+    transition: background-color 0.2s ease-in;
+    cursor: pointer;
+}
+
+.nav-bar .offcanvas-trigger .offcanvas-trigger-text {
+    margin-right: 0.25rem;
+    margin-top: 0.25rem;
+}
+
+.nav-bar .offcanvas-trigger:hover {
+    background-color: #6b879a;
+}
+
+@media screen and (max-width: 39.9375em) {
+    .nav-bar .offcanvas-trigger {
+        padding: 0.9rem;
+    }
+}
+
+.multilevel-offcanvas {
+    background: #222b31;
+    padding: 20px;
+    color: #fefefe;
+}
+
+.multilevel-offcanvas>.menu {
+    margin-bottom: 1rem;
+}
+
+.multilevel-offcanvas .menu a {
+    color: rgba(254, 254, 254, 0.6);
+    padding-top: 7px;
+    padding-bottom: 7px;
+    transition: color 0.2s ease-in;
+}
+
+.multilevel-offcanvas .menu a:hover {
+    color: #fefefe;
+}
+
+.multilevel-offcanvas .fa {
+    color: #fefefe;
+}
+
+.multilevel-offcanvas .is-accordion-submenu-parent>a::after {
+    border-color: rgba(254, 254, 254, 0.6) transparent transparent;
+}
+
+.multilevel-offcanvas .social-links {
+    margin-left: 20px;
+}
+
+.multilevel-offcanvas .social-links li {
+    margin-right: 5px;
+}
+
+.multilevel-offcanvas .social-links a:hover .fa {
+    color: #bebebe;
+    transition: color .2s ease-in;
+}
+
+.multilevel-offcanvas .social-links .fa {
+    font-size: 2.2rem;
+}
+
+.body-info {
+    text-align: center;
+    color: #2c3840;
+}
+
+.body-info .button {
+    margin: 1rem 0;
+    padding: 0.85em 2em;
+}
+
+.is-open+.off-canvas-content .hamburger .line:nth-child(1),
+.is-open+.off-canvas-content .hamburger .line:nth-child(3) {
+    width: 12px;
+}
+
+.is-open+.off-canvas-content .hamburger .line:nth-child(1) {
+    -webkit-transform: translateX(-5px) rotate(-45deg);
+    -ms-transform: translateX(-5px) rotate(-45deg);
+    transform: translateX(-5px) rotate(-45deg);
+}
+
+.is-open+.off-canvas-content .hamburger .line:nth-child(3) {
+    -webkit-transform: translateX(-5px) rotate(45deg);
+    -ms-transform: translateX(-5px) rotate(45deg);
+    transform: translateX(-5px) rotate(45deg);
+}
+
+.hamburger .line {
+    width: 20px;
+    height: 2px;
+    background-color: #fefefe;
+    display: block;
+    margin: 3px auto;
+    transition: all 0.3s ease-in-out;
+}
+
+.hamburger .line:last-child {
+    margin-bottom: 0;
+}
+
+
+/*==================
+    Footer CSS
+===================*/
+
+.ecommerce-footer {
+    background-color: #fefefe;
+    padding: 70px 20px 40px 20px;
+}
+
+.ecommerce-footer-links h5 {
+    color: #0a0a0a;
+    font-size: 1.2rem;
+    font-weight: 600;
+}
+
+.ecommerce-footer-links .menu>li>a {
+    line-height: 1.5em;
+    padding: 0.5rem 0rem;
+}
+
+.ecommerce-footer-links a {
+    color: #707070;
+    font-size: 1rem;
+    transition: all 0.5s ease;
+}
+
+.ecommerce-footer-links a:hover {
+    color: #0a0a0a;
+    transition: all 0.5s ease;
+}
+
+.ecommerce-footer-links .more-categories {
+    margin-top: 2rem;
+}
+
+@media screen and (max-width: 39.9375em) {
+    .ecommerce-footer-links .more-categories {
+        margin-top: 2rem;
+    }
+}
+
+@media screen and (max-width: 63.9375em) {
+    .ecommerce-footer-links .ecommerce-footer-links-block {
+        margin-bottom: 3rem;
+    }
+}
+
+.ecommerce-footer-bottom-bar {
+    border-top: 1px solid #e6e6e6;
+    margin-top: 40px;
+    padding-bottom: 80px;
+    padding-top: 30px;
+}
+
+.ecommerce-footer-bottom-bar .menu>li>a {
+    line-height: 1.2em;
+    padding: 10px 0;
+}
+
+.ecommerce-footer-bottom-bar a {
+    color: #8a8a8a;
+    font-size: 0.9rem;
+    transition: all 0.5s ease;
+}
+
+.ecommerce-footer-bottom-bar a:hover {
+    color: #0a0a0a;
+    transition: all 0.5s ease;
+}
+
+@media screen and (max-width: 39.9375em) {
+    .ecommerce-footer-bottom-bar ul {
+        text-align: center;
+    }
+}
+
+.ecommerce-footer-bottom-bar li {
+    display: inline;
+}
+
+.ecommerce-footer-bottom-bar .bottom-links {
+    margin-top: 0.65rem;
+    margin-left: 0;
+}
+
+.ecommerce-footer-bottom-bar .bottom-links li {
+    padding-right: 2rem;
+}
+
+@media screen and (max-width: 39.9375em) {
+    .ecommerce-footer-bottom-bar .bottom-links li {
+        text-align: center;
+    }
+}
+
+.ecommerce-footer-bottom-bar .ecommerce-footer-logomark {
+    text-align: center;
+}
+
+@media screen and (max-width: 39.9375em) {
+    .ecommerce-footer-bottom-bar .ecommerce-footer-logomark {
+        padding-top: 1rem;
+        margin-bottom: 1rem;
+    }
+}
+
+.ecommerce-footer-bottom-bar .bottom-copyright {
+    color: #8a8a8a;
+    font-size: 0.9rem;
+    line-height: 1.2em;
+    padding-top: 1rem;
+    text-align: right;
+}
+
+@media screen and (max-width: 39.9375em) {
+    .ecommerce-footer-bottom-bar .bottom-copyright {
+        text-align: center;
+    }
+}
+
+
+/*=================
+    QUOTE CSS
+==================*/
+
+.quote-inline-wrap-article-content {
+    max-width: 100%;
+    position: relative;
+}
+
+.quote-inline-wrap {
+    float: left;
+    max-width: 21.875rem;
+    padding: 0 1rem 1rem 0;
+}
+
+.quote-inline-wrap .quote-inline-marks {
+    font-size: 6.25rem;
+    color: #8a8a8a;
+    line-height: 1rem;
+}
+
+.quote-inline-wrap .quote-inline-testimonial {
+    border-radius: 5px;
+}
+
+.quote-inline-wrap .quote-inline-testimonial p {
+    font-weight: 300;
+}
+
+.quote-inline-wrap .quote-inline-person {
+    margin-bottom: 1.5rem;
+}
+
+.quote-inline-wrap .quote-inline-person .quote-inline-photo img {
+    border-radius: 50%;
+    width: 4.375rem;
+    height: 4.375rem;
+    float: left;
+    margin-right: 1rem;
+}
+
+.quote-inline-wrap .quote-inline-person p {
+    position: relative;
+    top: 5px;
+}
+
+.quote-inline-wrap .quote-inline-person p:nth-child(2) {
+    font-size: 1rem;
+    font-weight: 500;
+    margin-bottom: 0;
+}
+
+.quote-inline-wrap .quote-inline-person p:nth-child(3) {
+    font-size: 0.875rem;
+    font-weight: 400;
+    color: #8a8a8a;
+}
+
+@media screen and (max-width: 63.9375em) {
+    .quote-inline-wrap {
+        width: 100%;
+        float: none;
+        display: block;
+    }
+}
