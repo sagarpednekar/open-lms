@@ -1,5 +1,5 @@
-<div class="multilevel-offcanvas off-canvas position-right" id="offCanvasRight" data-off-canvas>
 
+<div class="multilevel-offcanvas off-canvas position-left" id="offCanvasLeft" data-off-canvas>
   <ul class="vertical menu" data-accordion-menu>
     <li><a href="#">SERVICES</a>
       <ul class="menu vertical nested">
@@ -24,8 +24,8 @@
     </li>
    </ul>
   <ul class="vertical menu">
-    <%= link_to 'Students', students_path,class: 'off-canvas-menu-item' %>
-    <%= link_to 'Books', books_path,class:'menu-item' %>
+    <li>    <%= link_to 'Students', students_path,class: 'off-canvas-menu-item' %></li>
+    <li>    <%= link_to 'Books', books_path,class:'menu-item' %></li>
     <li><a href="#">Login</a></li>
     <li><a href="#">Register</a></li>
     <li><a href="#">Pricing</a></li>
@@ -49,17 +49,11 @@
 <div class="off-canvas-content" data-off-canvas-content>
   <div class="nav-bar">
       <div class="nav-bar-left">
-        <%= link_to 'OPEN LMS',root_path,class: 'nav-bar-logo'%>
-        <!--<a class="nav-bar-logo"><img class="logo" src="http://placehold.it/150x30"></a>-->
-      </div>
-      <div class="nav-bar-right">
         <ul class="menu">
-          <li class="hide-for-small-only"><a href="#">TOUR</a></li>
-          <li class="hide-for-small-only"><a href="#">LOGIN</a></li>
           <li>
           <li>
-            <button class="offcanvas-trigger" type="button" data-open="offCanvasRight">
-              <span class="offcanvas-trigger-text hide-for-small-only">Menu</span>
+            <button class="offcanvas-trigger" type="button" data-open="offCanvasLeft">
+              <span class="offcanvas-trigger-text hide-for-small-only"></span>
               <div class="hamburger">
                 <span class="line"></span>
                 <span class="line"></span>
@@ -67,9 +61,9 @@
               </div>
             </button>
           </li>
+          <li><%= link_to 'OPEN LMS',root_path%></li>
         </ul>
     </div>
   </div>
  </div>
-
 
