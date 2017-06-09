@@ -16,6 +16,7 @@
  *= require foundation
  */
 
+@import "font-awesome";
 
 /*===========================
      CSS FOR NAVIGATION
@@ -367,68 +368,61 @@
 }
 
 
+/*==================
+     FONTS
+ ===================*/
+
+body {
+    font-family: 'Open Sans', sans-serif;
+    font-size: 14px;
+    line-height: 1.42857143;
+    color: #555555;
+}
+
+
 /*=====================
-    Table CSS
-======================*/
+   CSS Hero
+=======================*/
 
-.dashboard-table {
-    border-collapse: collapse;
+.marketing-site-hero {
+    background: url("https://images.pexels.com/photos/8264/pexels-photo.jpg?h=350&auto=compress&cs=tinysrgb") top right no-repeat;
+    height: 65vh;
+    background-size: cover;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-align-items: center;
+    -ms-flex-align: center;
+    align-items: center;
+    margin-bottom: 1em;
+}
+
+@media screen and (min-width: 40em) {
+    .marketing-site-hero {
+        background-position: center center;
+    }
+}
+
+.marketing-site-hero-content {
+    max-width: 75rem;
+    margin: 0 auto;
+    padding-left: 5%;
+    padding-right: 5%;
+}
+
+.marketing-site-hero-content h1 {
+    font-size: 32px;
+}
+
+.marketing-site-hero-content .button.round {
+    border-radius: 5000px;
+    text-transform: uppercase;
+    font-size: 12px;
     margin-bottom: 0;
-    td {
-        border-bottom: 1px dashed lighten(#ccc, 5%);
-    }
-    a {
-        color: darken(#ccc, 40%);
-    }
-    .bold {
-        color: #000;
-        font-weight: 600;
-    }
-    thead {
-        background: none;
-        border: 0;
-        border-bottom: 1px solid #ccc;
-        color: #ccc;
-        font-size: 0.8rem;
-    }
-    thead a {
-        color: #ccc;
-    }
-    tbody {
-        border: 1px solid darken(#ccc, 2%);
-        box-shadow: 0 0 5px 0 rgba(0, 0, 0, 0.15);
-        tr {
-            transition: all 0.5s ease;
-            &:hover {
-                background: #fcf7da;
-                transition: all 0.5s ease;
-            }
-            &:nth-child(even) {
-                background: none;
-            }
-        }
-    }
-    tr:last-child td {
-        border-bottom: 0;
-    }
 }
 
-.dashboard-table-text {
-    font-size: 1rem;
-    font-weight: 400;
-    margin-bottom: 0;
-    margin-top: 0.5rem;
-}
-
-.dashboard-table-timestamp {
-    color: darken(#ccc, 30%);
-    font-size: 0.9rem;
-    font-weight: 400;
-}
-
-.dashboard-table-image {
-    display: inline;
-    margin-right: 1rem;
-    margin-top: 0.6rem;
-    max-width: none;
+@media screen and (min-width: 40em) {
+    .marketing-site-hero-content {
+        padding-left: 50%;
+    }
 }

@@ -1,7 +1,14 @@
-<p id="notice"><%= notice %></p>
+<p id="notice" ><%#= notice %></p>
+  <% flash.each do |key, value| %>
+    <div class="callout <%= key %>" data-closable>
+      <%= value %>
+    <button class="close-button" aria-label="Dismiss alert" type="button" data-close>
+      <span aria-hidden="true">&times;</span>
+    </button>
+    </div>
+  <% end %>
 
 <h1>Books</h1>
-
 <table class="dashboard-table">
   <thead>
     <tr>
@@ -32,9 +39,9 @@
         <td><%= book.date_of_pub %></td>
         <td><%= book.price %></td>
         <td><%= book.status %></td>
-        <td><%= link_to 'Show', book %></td>
-        <td><%= link_to 'Edit', edit_book_path(book) %></td>
-        <td><%= link_to 'Destroy', book, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+        <td><%= link_to '<i class="fa fa-eye"></i>'.html_safe, book %></td>
+        <td><%= link_to '<i class="fa fa-pencil-square-o"></i>'.html_safe, edit_book_path(book) %></td>
+        <td><%= link_to '<i class="fa fa-trash-o"></i>'.html_safe, book, method: :delete, data: { confirm: 'Are you sure?' } %></td>
       </tr>
     <% end %>
   </tbody>

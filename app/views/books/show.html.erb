@@ -1,4 +1,11 @@
-<p id="notice"><%= notice %></p>
+  <% flash.each do |key, value| %>
+    <div class="callout <%= key %>" data-closable>
+      <%= value %>
+      <button class="close-button" aria-label="Dismiss alert" type="button" data-close>
+        <span aria-hidden="true">&times;</span>
+      </button>      
+    </div>
+  <% end %>
 
 <p>
   <strong>Isbn:</strong>
