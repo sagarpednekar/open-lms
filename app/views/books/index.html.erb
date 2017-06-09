@@ -9,6 +9,10 @@
   <% end %>
 
 <h1>Books</h1>
+<%= form_tag books_path , :method => 'get' do%>
+  <%= text_field_tag :search,params[:search] ,placeholder: 'Search by title'%>
+  <%= submit_tag 'Search'%>
+<%end%>
 <table class="dashboard-table">
   <thead>
     <tr>

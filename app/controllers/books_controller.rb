@@ -2,9 +2,9 @@ class BooksController < ApplicationController
   before_action :set_book, only: [:show, :edit, :update, :destroy]
 
   # GET /books
-  # GET /books.json
+  # GET /books.jsons
   def index
-    @books = Book.all
+    @books = Book.search(params[:search])
   end
 
   # GET /books/1

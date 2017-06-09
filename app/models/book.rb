@@ -7,4 +7,12 @@ class Book < ApplicationRecord
             Book.create! row.to_hash
         end
     end    
+    
+    def self.search(search)
+        if search
+            where("title LIKE ?","%#{search}%")
+        else
+            all
+        end
+    end
 end

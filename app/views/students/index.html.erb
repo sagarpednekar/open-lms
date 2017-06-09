@@ -8,7 +8,10 @@
     </div>
   <% end %>
 <h1>Students</h1>
-
+<%= form_tag students_path , :method => 'get' do%>
+  <%= text_field_tag :search,params[:search] ,placeholder: 'Search by name'%>
+  <%= submit_tag 'Search'%>
+<%end%>
 <table class="hover">
   <thead>
     <tr>

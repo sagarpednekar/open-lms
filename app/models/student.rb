@@ -7,4 +7,14 @@ class Student < ApplicationRecord
             Student.create! row.to_hash
         end
     end    
+    def self.search(search)
+        if search
+            where("name LIKE ?","%#{search}%")
+        else
+            puts "No reccords Found"
+            all
+        end
+    end
+
+
 end
